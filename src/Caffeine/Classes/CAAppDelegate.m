@@ -80,7 +80,7 @@
 {
     [NSApp activateIgnoringOtherApps:YES];
     
-    NSString *credits = NSLocalizedString(@"© 2006 Tomas Franzén \n © 2018 Michael Jones \n © 2022 Dominic Rodemer \n\n Source code: \n https://github.com/domzilla/Caffeine", @"");
+    NSString *credits = NSLocalizedString(@"© 2006 Tomas Franzén \n © 2018 Michael Jones \n © 2022 Dominic Rodemer \n\n Source code: \n https://github.caffeine-app.net", @"");
     [NSApp orderFrontStandardAboutPanelWithOptions:@{@"Copyright" : credits}];
 }
 
