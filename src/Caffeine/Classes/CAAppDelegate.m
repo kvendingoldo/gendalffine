@@ -2,7 +2,8 @@
 //  CAAppDelegate.m
 //  Caffeine
 //
-//  Created by Dominic Rodemer on 16.04.22.
+//  Created by Tomas Franzén on 2006-05-20.
+//  Copyright 2006 Lighthead Software. All rights reserved.
 //
 
 #import "CAAppDelegate.h"
@@ -79,7 +80,7 @@
 {
     [NSApp activateIgnoringOtherApps:YES];
     
-    NSString *credits = NSLocalizedString(@"© 2022 Dominic Rodemer. \n\n Based on https://github.com/IntelliScape/caffeine/", @"");
+    NSString *credits = NSLocalizedString(@"© 2006 Tomas Franzén \n © 2018 Michael Jones \n © 2022 Dominic Rodemer \n\n Source code: \n https://github.com/domzilla/Caffeine", @"");
     [NSApp orderFrontStandardAboutPanelWithOptions:@{@"Copyright" : credits}];
 }
 

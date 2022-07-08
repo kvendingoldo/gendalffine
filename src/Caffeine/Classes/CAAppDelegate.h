@@ -2,7 +2,8 @@
 //  CAAppDelegate.h
 //  Caffeine
 //
-//  Created by Dominic Rodemer on 16.04.22.
+//  Created by Tomas Franzén on 2006-05-20.
+//  Copyright 2006 Lighthead Software. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
