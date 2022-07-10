@@ -11,6 +11,7 @@
 
 @synthesize durationButton;
 @synthesize activateAtLaunchButton;
+@synthesize deactivateOnManualSleepButton;
 @synthesize showAtLaunchButton;
 
 - (void)awakeFromNib
@@ -22,6 +23,9 @@
     
     NSControlStateValue activateAtLaunchState = ([[NSUserDefaults standardUserDefaults] boolForKey:@"CAActivateAtLaunch"]) ? NSControlStateValueOn : NSControlStateValueOff;
     [self.activateAtLaunchButton setState:activateAtLaunchState];
+    
+    NSControlStateValue deactivateOnManualSleepState = ([[NSUserDefaults standardUserDefaults] boolForKey:@"CADeactivateOnManualSleep"]) ? NSControlStateValueOn : NSControlStateValueOff;
+    [self.deactivateOnManualSleepButton setState:deactivateOnManualSleepState];
     
     NSInteger duration = [[NSUserDefaults standardUserDefaults] integerForKey:@"CADefaultDuration"];
     [durationButton selectItemWithTag:duration];
@@ -40,6 +44,13 @@
 {
     BOOL activateAtLaunch = (activateAtLaunchButton.state == NSControlStateValueOn) ? YES : NO;
     [[NSUserDefaults standardUserDefaults] setBool:activateAtLaunch forKey:@"CAActivateAtLaunch"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (IBAction)deactivateOnManualSleepButtonAction:(id)sender
+{
+    BOOL deactivateOnManualSleep = (deactivateOnManualSleepButton.state == NSControlStateValueOn) ? YES : NO;
+    [[NSUserDefaults standardUserDefaults] setBool:deactivateOnManualSleep forKey:@"CADeactivateOnManualSleep"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 

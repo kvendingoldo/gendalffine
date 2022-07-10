@@ -16,8 +16,19 @@
     
     // Prevent the computer from going to sleep when another account was active.
     userSessionIsActive = YES;
-    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self selector:@selector(userSessionDidResignActive:) name:NSWorkspaceSessionDidResignActiveNotification object:nil];
-    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self selector:@selector(userSessionDidBecomeActive:) name:NSWorkspaceSessionDidBecomeActiveNotification object:nil];
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
+                                                           selector:@selector(userSessionDidResignActive:)
+                                                               name:NSWorkspaceSessionDidResignActiveNotification
+                                                             object:nil];
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
+                                                           selector:@selector(userSessionDidBecomeActive:)
+                                                               name:NSWorkspaceSessionDidBecomeActiveNotification
+                                                             object:nil];
+    
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
+                                                           selector:@selector(workspaceWillSleepNotification:)
+                                                               name:NSWorkspaceWillSleepNotification
+                                                             object:nil];
         
     [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO]
                                                                                         forKey:@"CASuppressLaunchMessage"]];
@@ -226,6 +237,14 @@
 - (void)userSessionDidBecomeActive:(NSNotification *)note
 {
     userSessionIsActive = YES;
+}
+
+- (void)workspaceWillSleepNotification:(NSNotification *)note
+{
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"CADeactivateOnManualSleep"])
+    {
+        [self deactivate];
+    }
 }
 
 @end
