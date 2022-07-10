@@ -17,11 +17,11 @@
     // Prevent the computer from going to sleep when another account was active.
     userSessionIsActive = YES;
     [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
-                                                           selector:@selector(userSessionDidResignActive:)
+                                                           selector:@selector(workspaceSessionDidResignActiveNotification:)
                                                                name:NSWorkspaceSessionDidResignActiveNotification
                                                              object:nil];
     [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
-                                                           selector:@selector(userSessionDidBecomeActive:)
+                                                           selector:@selector(workspaceSessionDidBecomeActiveNotification:)
                                                                name:NSWorkspaceSessionDidBecomeActiveNotification
                                                              object:nil];
     
@@ -229,17 +229,17 @@
 
 #pragma mark NSWorkspace Notifications
 #pragma mark ---
-- (void)userSessionDidResignActive:(NSNotification *)note
+- (void)workspaceSessionDidResignActiveNotification:(NSNotification *)notification
 {
     userSessionIsActive = NO;
 }
 
-- (void)userSessionDidBecomeActive:(NSNotification *)note
+- (void)workspaceSessionDidBecomeActiveNotification:(NSNotification *)notification
 {
     userSessionIsActive = YES;
 }
 
-- (void)workspaceWillSleepNotification:(NSNotification *)note
+- (void)workspaceWillSleepNotification:(NSNotification *)notification
 {
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"CADeactivateOnManualSleep"])
     {
