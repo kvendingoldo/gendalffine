@@ -1,13 +1,13 @@
 //
-//  CAPreferencesWindow.h
+//  CAPreferencesWindowController.h
 //  Caffeine
 //
-//  Created by Dominic Rodemer on 18.06.22.
+//  Created by Dominic Rodemer on 11.07.22.
 //
 
 #import <Cocoa/Cocoa.h>
 
-@interface CAPreferencesWindow : NSWindow
+@interface CAPreferencesWindowController : NSWindowController
 {
     NSPopUpButton *durationButton;
     NSButton *activateAtLaunchButton;

@@ -10,6 +10,8 @@
 
 #import <IOKit/pwr_mgt/IOPMLib.h>
 
+@class CAPreferencesWindowController;
+
 @interface CAAppDelegate : NSObject <NSApplicationDelegate>
 {
     BOOL isActive;
@@ -23,16 +25,13 @@
     NSImage *statusItemMenuIconActive;
     
     IBOutlet NSMenu *menu;
-    IBOutlet NSWindow *firstTimeWindow;
     IBOutlet NSMenuItem *infoMenuItem;
     IBOutlet NSMenuItem *infoSeparatorItem;
+    
+    CAPreferencesWindowController *preferencesWindowController;
 }
 
 @property (nonatomic, assign, readonly) BOOL isActive;
-
-- (IBAction)showAbout:(id)sender;
-- (IBAction)showPreferences:(id)sender;
-- (IBAction)activateWithTimeout:(id)sender;
 
 - (void)activate;
 - (void)activateWithTimeoutDuration:(NSTimeInterval)interval;

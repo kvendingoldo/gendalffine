@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -15,7 +14,6 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="CAAppDelegate">
             <connections>
-                <outlet property="firstTimeWindow" destination="gOT-Lc-QCR" id="b3D-79-pDe"/>
                 <outlet property="infoMenuItem" destination="cA9-iR-gAT" id="bXe-Ep-jsY"/>
                 <outlet property="infoSeparatorItem" destination="FyX-lk-NVr" id="ddS-bS-e9S"/>
                 <outlet property="menu" destination="AZ0-dt-8Ex" id="P6z-LH-Web"/>
@@ -117,164 +115,5 @@
             </connections>
             <point key="canvasLocation" x="-398" y="-174"/>
         </menu>
-        <window title="Welcome to Caffeine" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="gOT-Lc-QCR" userLabel="First Time/Preferences" customClass="CAPreferencesWindow">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="441" y="384" width="533" height="294"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="3360" height="1865"/>
-            <value key="minSize" type="size" width="213" height="107"/>
-            <view key="contentView" id="K3R-iS-LK1">
-                <rect key="frame" x="0.0" y="0.0" width="533" height="294"/>
-                <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="378" translatesAutoresizingMaskIntoConstraints="NO" id="Wiw-I8-Uew">
-                        <rect key="frame" x="134" y="218" width="382" height="56"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="justified" id="978-Td-eHN">
-                            <font key="font" metaFont="system"/>
-                            <string key="title">Caffeine is now running. You can find its icon in the right side of your menu bar. Click it to disable automatic sleep, click it again to enable automatic sleep.</string>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QMK-CP-oPQ">
-                        <rect key="frame" x="425" y="13" width="96" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="5vC-c2-0Fh">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                            <string key="keyEquivalent" base64-UTF8="YES">
-DQ
-</string>
-                        </buttonCell>
-                        <connections>
-                            <action selector="orderOut:" target="gOT-Lc-QCR" id="Auc-1J-RIC"/>
-                        </connections>
-                    </button>
-                    <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WUG-b8-d0A">
-                        <rect key="frame" x="20" y="178" width="96" height="96"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="crI-F6-hZ5"/>
-                    </imageView>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="372" translatesAutoresizingMaskIntoConstraints="NO" id="lbS-jk-KQB">
-                        <rect key="frame" x="134" y="173" width="376" height="37"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="justified" title="Right-click (or ⌘-click) the menu bar icon to show the Caffeine menu." id="jvz-qG-fjF">
-                            <font key="font" metaFont="systemBold"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bwn-w8-tVb">
-                        <rect key="frame" x="13" y="13" width="96" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="x9l-sD-sH6">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="terminate:" target="-2" id="7U9-tr-Q21"/>
-                        </connections>
-                    </button>
-                    <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="50L-3V-YyN">
-                        <rect key="frame" x="134" y="59" width="374" height="18"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        <buttonCell key="cell" type="check" title="Show this message when starting Caffeine" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="nnt-7M-Yn3">
-                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="showAtLaunchButtonAction:" target="gOT-Lc-QCR" id="POP-75-BiV"/>
-                        </connections>
-                    </button>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XfW-Tc-vS9">
-                        <rect key="frame" x="134" y="128" width="112" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Default duration:" id="0Nl-ao-2Cv">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i4f-Fo-tja">
-                        <rect key="frame" x="134" y="103" width="374" height="18"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        <buttonCell key="cell" type="check" title="Activate when starting Caffeine" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="AaL-Vj-7nI">
-                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="activateAtLaunchButtonAction:" target="gOT-Lc-QCR" id="coR-BZ-MU5"/>
-                        </connections>
-                    </button>
-                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SVq-9l-rEG">
-                        <rect key="frame" x="249" y="122" width="119" height="26"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <popUpButtonCell key="cell" type="push" title="Indefinitely" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="eTs-uC-GOG" id="whp-UF-09T">
-                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="menu"/>
-                            <menu key="menu" title="OtherViews" id="8x8-fe-bor">
-                                <items>
-                                    <menuItem title="Indefinitely" state="on" id="eTs-uC-GOG">
-                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                    </menuItem>
-                                    <menuItem title="Short (testing)" tag="-1" hidden="YES" id="buf-Ce-xFp">
-                                        <modifierMask key="keyEquivalentModifierMask" option="YES"/>
-                                    </menuItem>
-                                    <menuItem title="1 minute" tag="1" hidden="YES" id="Ktz-OU-Qk0">
-                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                    </menuItem>
-                                    <menuItem title="5 minutes" tag="5" id="0bS-uh-LhI">
-                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                    </menuItem>
-                                    <menuItem title="10 minutes" tag="10" id="ZS2-fk-a8o">
-                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                    </menuItem>
-                                    <menuItem title="15 minutes" tag="15" id="lUN-7Y-g0A">
-                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                    </menuItem>
-                                    <menuItem title="30 minutes" tag="30" id="PCi-tM-9ll">
-                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                    </menuItem>
-                                    <menuItem title="1 hour" tag="60" id="JtO-WY-5YY">
-                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                    </menuItem>
-                                    <menuItem title="2 hours" tag="120" id="vLA-P7-Smf">
-                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                    </menuItem>
-                                    <menuItem title="5 hours" tag="300" id="l4a-CL-jxa">
-                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                    </menuItem>
-                                </items>
-                            </menu>
-                        </popUpButtonCell>
-                        <connections>
-                            <action selector="durationButtonAction:" target="gOT-Lc-QCR" id="4oI-i6-kIY"/>
-                        </connections>
-                    </popUpButton>
-                    <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w6p-ae-yUH">
-                        <rect key="frame" x="134" y="81" width="374" height="18"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        <buttonCell key="cell" type="check" title="Dectivate when device manually goes to sleep" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="RRv-hx-rWT">
-                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="deactivateOnManualSleepButtonAction:" target="gOT-Lc-QCR" id="y1p-DY-GyS"/>
-                        </connections>
-                    </button>
-                </subviews>
-            </view>
-            <connections>
-                <outlet property="activateAtLaunchButton" destination="i4f-Fo-tja" id="q0A-PW-MlZ"/>
-                <outlet property="deactivateOnManualSleepButton" destination="w6p-ae-yUH" id="Wza-vL-q41"/>
-                <outlet property="durationButton" destination="SVq-9l-rEG" id="sO4-by-1Nm"/>
-                <outlet property="showAtLaunchButton" destination="50L-3V-YyN" id="W55-4V-hxA"/>
-            </connections>
-            <point key="canvasLocation" x="172.5" y="-168"/>
-        </window>
     </objects>
-    <resources>
-        <image name="NSApplicationIcon" width="32" height="32"/>
-    </resources>
 </document>

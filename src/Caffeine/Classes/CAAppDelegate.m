@@ -8,6 +8,8 @@
 
 #import "CAAppDelegate.h"
 
+#import "CAPreferencesWindowController.h"
+
 @implementation CAAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -32,6 +34,8 @@
         
     [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO]
                                                                                         forKey:@"CASuppressLaunchMessage"]];
+    
+    preferencesWindowController = [[CAPreferencesWindowController alloc] init];
     
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"CASuppressLaunchMessage"])
         [self showPreferences:nil];
@@ -98,8 +102,7 @@
 - (IBAction)showPreferences:(id)sender
 {
     [NSApp activateIgnoringOtherApps:YES];
-    [firstTimeWindow center];
-    [firstTimeWindow makeKeyAndOrderFront:sender];
+    [preferencesWindowController showWindow:self];
 }
 
 
@@ -242,9 +245,7 @@
 - (void)workspaceWillSleepNotification:(NSNotification *)notification
 {
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"CADeactivateOnManualSleep"])
-    {
         [self deactivate];
-    }
 }
 
 @end

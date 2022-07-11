@@ -1,34 +1,51 @@
 //
-//  CAPreferencesWindow.m
+//  CAPreferencesWindowController.m
 //  Caffeine
 //
-//  Created by Dominic Rodemer on 18.06.22.
+//  Created by Dominic Rodemer on 11.07.22.
 //
 
-#import "CAPreferencesWindow.h"
+#import "CAPreferencesWindowController.h"
 
-@implementation CAPreferencesWindow
+@implementation CAPreferencesWindowController
 
 @synthesize durationButton;
 @synthesize activateAtLaunchButton;
 @synthesize deactivateOnManualSleepButton;
 @synthesize showAtLaunchButton;
 
-- (void)awakeFromNib
+- (id)init
 {
-    [super awakeFromNib];
+    if (self = [super initWithWindowNibName:@"CAPreferencesWindowController" owner:self])
+    {
+        
+    }
+    
+    return self;
+}
+
+- (void)windowDidLoad
+{
+    [super windowDidLoad];
     
     NSControlStateValue suppressAtLaunchState = (![[NSUserDefaults standardUserDefaults] boolForKey:@"CASuppressLaunchMessage"]) ? NSControlStateValueOn : NSControlStateValueOff;
-    [self.showAtLaunchButton setState:suppressAtLaunchState];
+    [showAtLaunchButton setState:suppressAtLaunchState];
     
     NSControlStateValue activateAtLaunchState = ([[NSUserDefaults standardUserDefaults] boolForKey:@"CAActivateAtLaunch"]) ? NSControlStateValueOn : NSControlStateValueOff;
-    [self.activateAtLaunchButton setState:activateAtLaunchState];
+    [activateAtLaunchButton setState:activateAtLaunchState];
     
     NSControlStateValue deactivateOnManualSleepState = ([[NSUserDefaults standardUserDefaults] boolForKey:@"CADeactivateOnManualSleep"]) ? NSControlStateValueOn : NSControlStateValueOff;
-    [self.deactivateOnManualSleepButton setState:deactivateOnManualSleepState];
+    [deactivateOnManualSleepButton setState:deactivateOnManualSleepState];
     
     NSInteger duration = [[NSUserDefaults standardUserDefaults] integerForKey:@"CADefaultDuration"];
     [durationButton selectItemWithTag:duration];
+}
+
+- (IBAction)showWindow:(id)sender
+{
+    [self.window center];
+    
+    [super showWindow:sender];
 }
 
 
@@ -59,6 +76,16 @@
     BOOL suppressAtLaunch = (showAtLaunchButton.state == NSControlStateValueOff) ? YES : NO;
     [[NSUserDefaults standardUserDefaults] setBool:suppressAtLaunch forKey:@"CASuppressLaunchMessage"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (IBAction)closeButtonAction:(id)sender
+{
+    [self close];
+}
+
+- (IBAction)quitButtonAction:(id)sender
+{
+    [NSApp terminate:self];
 }
 
 @end

@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F22DBAB1285DFE1C0058AF1F /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22DBAB0285DFE1C0058AF1F /* IOKit.framework */; };
-		F22DBAB7285E1B8D0058AF1F /* CAPreferencesWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F22DBAB6285E1B8D0058AF1F /* CAPreferencesWindow.m */; };
+		F22DBAB7285E1B8D0058AF1F /* CAPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22DBAB6285E1B8D0058AF1F /* CAPreferencesWindowController.m */; };
+		F287BAA3287C02B600299CC0 /* CAPreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F287BAA1287C02B600299CC0 /* CAPreferencesWindowController.xib */; };
 		F2E26BFC280B072000B6F9B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E26BFB280B072000B6F9B2 /* Assets.xcassets */; };
 		F2E26BFF280B072000B6F9B2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E26BFD280B072000B6F9B2 /* MainMenu.xib */; };
 		F2E26C01280B072000B6F9B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E26C00280B072000B6F9B2 /* main.m */; };
@@ -21,8 +22,9 @@
 
 /* Begin PBXFileReference section */
 		F22DBAB0285DFE1C0058AF1F /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		F22DBAB5285E1B8D0058AF1F /* CAPreferencesWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAPreferencesWindow.h; sourceTree = "<group>"; };
-		F22DBAB6285E1B8D0058AF1F /* CAPreferencesWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAPreferencesWindow.m; sourceTree = "<group>"; };
+		F22DBAB5285E1B8D0058AF1F /* CAPreferencesWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAPreferencesWindowController.h; sourceTree = "<group>"; };
+		F22DBAB6285E1B8D0058AF1F /* CAPreferencesWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAPreferencesWindowController.m; sourceTree = "<group>"; };
+		F287BAA2287C02B600299CC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Caffeine/Base.lproj/CAPreferencesWindowController.xib; sourceTree = SOURCE_ROOT; };
 		F2E26BF5280B072000B6F9B2 /* Caffeine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Caffeine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E26BFB280B072000B6F9B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2E26BFE280B072000B6F9B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -57,6 +59,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F287BAA0287BFD5A00299CC0 /* WindowController */ = {
+			isa = PBXGroup;
+			children = (
+				F22DBAB5285E1B8D0058AF1F /* CAPreferencesWindowController.h */,
+				F22DBAB6285E1B8D0058AF1F /* CAPreferencesWindowController.m */,
+				F287BAA1287C02B600299CC0 /* CAPreferencesWindowController.xib */,
+			);
+			name = WindowController;
+			sourceTree = "<group>";
+		};
 		F2E26BEC280B072000B6F9B2 = {
 			isa = PBXGroup;
 			children = (
@@ -89,8 +101,7 @@
 			children = (
 				F2E26C0A280B076300B6F9B2 /* CAAppDelegate.h */,
 				F2E26C09280B076300B6F9B2 /* CAAppDelegate.m */,
-				F22DBAB5285E1B8D0058AF1F /* CAPreferencesWindow.h */,
-				F22DBAB6285E1B8D0058AF1F /* CAPreferencesWindow.m */,
+				F287BAA0287BFD5A00299CC0 /* WindowController */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -99,8 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				F2E26C35280C089100B6F9B2 /* Images */,
-				F2E26BFB280B072000B6F9B2 /* Assets.xcassets */,
 				F2E26BFD280B072000B6F9B2 /* MainMenu.xib */,
+				F2E26BFB280B072000B6F9B2 /* Assets.xcassets */,
 				F2E26C5F280C4B3500B6F9B2 /* Info.plist */,
 				F2E26C02280B072000B6F9B2 /* Caffeine.entitlements */,
 			);
@@ -187,6 +198,7 @@
 				F2E26C45280C089100B6F9B2 /* active.png in Resources */,
 				F2E26C42280C089100B6F9B2 /* inactive.png in Resources */,
 				F2E26BFF280B072000B6F9B2 /* MainMenu.xib in Resources */,
+				F287BAA3287C02B600299CC0 /* CAPreferencesWindowController.xib in Resources */,
 				F2E26C3E280C089100B6F9B2 /* active@2x.png in Resources */,
 				F2E26C3F280C089100B6F9B2 /* inactive@2x.png in Resources */,
 			);
@@ -200,7 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2E26C0B280B076300B6F9B2 /* CAAppDelegate.m in Sources */,
-				F22DBAB7285E1B8D0058AF1F /* CAPreferencesWindow.m in Sources */,
+				F22DBAB7285E1B8D0058AF1F /* CAPreferencesWindowController.m in Sources */,
 				F2E26C01280B072000B6F9B2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,6 +220,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		F287BAA1287C02B600299CC0 /* CAPreferencesWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F287BAA2287C02B600299CC0 /* Base */,
+			);
+			name = CAPreferencesWindowController.xib;
+			sourceTree = "<group>";
+		};
 		F2E26BFD280B072000B6F9B2 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
