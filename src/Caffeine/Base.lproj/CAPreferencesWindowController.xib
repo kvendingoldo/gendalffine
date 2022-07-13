@@ -9,8 +9,14 @@
         <customObject id="-2" userLabel="File's Owner" customClass="CAPreferencesWindowController">
             <connections>
                 <outlet property="activateAtLaunchButton" destination="3RL-Ce-4Gn" id="00q-3B-IoB"/>
+                <outlet property="closeButton" destination="HJi-gs-V6e" id="Hnz-dj-V9k"/>
                 <outlet property="deactivateOnManualSleepButton" destination="laH-Bo-r5z" id="aao-yU-mz3"/>
                 <outlet property="durationButton" destination="5cj-zy-gga" id="iA8-EZ-2is"/>
+                <outlet property="durationsTextField" destination="SOc-yV-C6m" id="cJC-X3-4Qq"/>
+                <outlet property="iconView" destination="zq6-gW-FWJ" id="pB9-Sx-6cy"/>
+                <outlet property="informationTextField" destination="RV0-Xj-HDk" id="ILI-xc-58Q"/>
+                <outlet property="instructionsTextField" destination="FpZ-Hk-5nW" id="xty-aX-Pew"/>
+                <outlet property="quitButton" destination="GVv-6R-uwK" id="izj-Od-J58"/>
                 <outlet property="showAtLaunchButton" destination="40I-47-yxv" id="vr2-og-AnV"/>
                 <outlet property="window" destination="6od-XL-ffW" id="AWO-IB-Mln"/>
             </connections>
@@ -20,16 +26,16 @@
         <window title="Welcome to Caffeine" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="6od-XL-ffW" userLabel="First Time/Preferences">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="441" y="384" width="533" height="294"/>
+            <rect key="contentRect" x="441" y="384" width="624" height="294"/>
             <rect key="screenRect" x="0.0" y="0.0" width="3360" height="1865"/>
             <value key="minSize" type="size" width="213" height="107"/>
             <view key="contentView" id="5EL-vG-hXz">
-                <rect key="frame" x="0.0" y="0.0" width="533" height="294"/>
+                <rect key="frame" x="0.0" y="0.0" width="624" height="294"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="378" translatesAutoresizingMaskIntoConstraints="NO" id="RV0-Xj-HDk">
-                        <rect key="frame" x="134" y="218" width="382" height="56"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <rect key="frame" x="133" y="218" width="467" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="justified" id="okL-UW-aSb">
                             <font key="font" metaFont="system"/>
                             <string key="title">Caffeine is now running. You can find its icon in the right side of your menu bar. Click it to disable automatic sleep, click it again to enable automatic sleep.</string>
@@ -38,8 +44,8 @@
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HJi-gs-V6e">
-                        <rect key="frame" x="425" y="13" width="96" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <rect key="frame" x="543" y="13" width="69" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="zdD-ka-2e9">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -53,12 +59,12 @@ DQ
                     </button>
                     <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zq6-gW-FWJ">
                         <rect key="frame" x="20" y="178" width="96" height="96"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="f73-79-LDr"/>
                     </imageView>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="372" translatesAutoresizingMaskIntoConstraints="NO" id="FpZ-Hk-5nW">
-                        <rect key="frame" x="134" y="173" width="376" height="37"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <rect key="frame" x="134" y="173" width="467" height="37"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="justified" title="Right-click (or ⌘-click) the menu bar icon to show the Caffeine menu." id="hB9-Sr-Xlz">
                             <font key="font" metaFont="systemBold"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -66,8 +72,8 @@ DQ
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GVv-6R-uwK">
-                        <rect key="frame" x="13" y="13" width="96" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <rect key="frame" x="13" y="13" width="60" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8XO-ec-vKo">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -77,8 +83,8 @@ DQ
                         </connections>
                     </button>
                     <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="40I-47-yxv">
-                        <rect key="frame" x="134" y="59" width="374" height="18"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <rect key="frame" x="134" y="59" width="465" height="18"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="check" title="Show this message when starting Caffeine" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="1QK-7q-0g7">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
@@ -89,7 +95,7 @@ DQ
                     </button>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SOc-yV-C6m">
                         <rect key="frame" x="134" y="128" width="112" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Default duration:" id="IN5-46-D02">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -97,8 +103,8 @@ DQ
                         </textFieldCell>
                     </textField>
                     <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3RL-Ce-4Gn">
-                        <rect key="frame" x="134" y="103" width="374" height="18"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <rect key="frame" x="134" y="103" width="465" height="18"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="check" title="Activate when starting Caffeine" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="ac9-VB-gb2">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
@@ -109,7 +115,7 @@ DQ
                     </button>
                     <popUpButton verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5cj-zy-gga">
                         <rect key="frame" x="249" y="122" width="119" height="26"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <popUpButtonCell key="cell" type="push" title="Indefinitely" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="pjP-3i-AkI" id="sqS-6w-ldP">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="menu"/>
@@ -153,8 +159,8 @@ DQ
                         </connections>
                     </popUpButton>
                     <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="laH-Bo-r5z">
-                        <rect key="frame" x="134" y="81" width="374" height="18"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <rect key="frame" x="134" y="81" width="464" height="18"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="check" title="Dectivate when device goes to sleep manually" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="zrA-k4-Kvx">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
@@ -165,7 +171,7 @@ DQ
                     </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-5243" y="-203"/>
+            <point key="canvasLocation" x="-5198" y="-203"/>
         </window>
     </objects>
     <resources>
