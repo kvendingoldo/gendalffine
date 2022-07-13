@@ -95,7 +95,7 @@
 {
     [NSApp activateIgnoringOtherApps:YES];
     
-    NSString *credits = NSLocalizedString(@"© 2006 Tomas Franzén \n © 2018 Michael Jones \n © 2022 Dominic Rodemer \n\n Source code: \n https://github.caffeine-app.net", @"");
+    NSString *credits = @"© 2006 Tomas Franzén \n © 2018 Michael Jones \n © 2022 Dominic Rodemer \n\n Source code: \n https://github.caffeine-app.net";
     [NSApp orderFrontStandardAboutPanelWithOptions:@{@"Copyright" : credits}];
 }
 
@@ -210,15 +210,15 @@
         {
             NSTimeInterval left = [[timeoutTimer fireDate] timeIntervalSinceNow];
             if(left >= 3600)
-                [infoMenuItem setTitle:[NSString stringWithFormat:@"%02d:%02d left", (int)(left/3600), (int)(((int)left%3600)/60)]];
-            else if(left >= 60)
-                [infoMenuItem setTitle:[NSString stringWithFormat:@"%d minutes left", (int)(left/60)]];
+                [infoMenuItem setTitle:[NSString stringWithFormat:@"%02d:%02d", (int)(left/3600), (int)(((int)left%3600)/60)]];
+            else if(left > 60)
+                [infoMenuItem setTitle:[NSString stringWithFormat:NSLocalizedString(@"%d minutes", @"e.g. 5 minutes"), (int)(left/60)]];
             else
-                [infoMenuItem setTitle:[NSString stringWithFormat:@"%d seconds left", (int)left]];
+                [infoMenuItem setTitle:[NSString stringWithFormat:NSLocalizedString(@"%d seconds", @"e.g. 54 seconds"), (int)left]];
         }
         else
         {
-            [infoMenuItem setTitle:@"Caffeine is active"];
+            [infoMenuItem setTitle:NSLocalizedString(@"Caffeine is active", @"Indicate that Caffeine is active")];
         }
     }
     else

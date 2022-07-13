@@ -20,5 +20,4 @@
 @property (nonatomic, strong) IBOutlet NSButton *deactivateOnManualSleepButton;
 @property (nonatomic, strong) IBOutlet NSButton *showAtLaunchButton;
 
-
 @end
