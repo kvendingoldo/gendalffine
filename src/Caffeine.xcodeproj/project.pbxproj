@@ -61,6 +61,9 @@
 		F287BAC8287E838700299CC0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainMenu.strings"; sourceTree = "<group>"; };
 		F287BAC9287E838700299CC0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/CAPreferencesWindowController.strings"; sourceTree = "<group>"; };
 		F287BACA287E838700299CC0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		F287BAD028886C5A00299CC0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/CAPreferencesWindowController.strings; sourceTree = "<group>"; };
+		F287BAD128886C5A00299CC0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F287BAD228886C5A00299CC0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		F2E26BF5280B072000B6F9B2 /* Caffeine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Caffeine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E26BFB280B072000B6F9B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2E26BFE280B072000B6F9B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -227,6 +230,7 @@
 				"pt-PT",
 				ru,
 				"zh-Hans",
+				ja,
 			);
 			mainGroup = F2E26BEC280B072000B6F9B2;
 			productRefGroup = F2E26BF6280B072000B6F9B2 /* Products */;
@@ -294,6 +298,7 @@
 				F287BAC2287E837B00299CC0 /* pt-PT */,
 				F287BAC5287E838100299CC0 /* ru */,
 				F287BAC9287E838700299CC0 /* zh-Hans */,
+				F287BAD028886C5A00299CC0 /* ja */,
 			);
 			name = CAPreferencesWindowController.strings;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 				F287BAC4287E837B00299CC0 /* pt-PT */,
 				F287BAC6287E838100299CC0 /* ru */,
 				F287BACA287E838700299CC0 /* zh-Hans */,
+				F287BAD128886C5A00299CC0 /* ja */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -330,6 +336,7 @@
 				F287BAC3287E837B00299CC0 /* pt-PT */,
 				F287BAC7287E838100299CC0 /* ru */,
 				F287BAC8287E838700299CC0 /* zh-Hans */,
+				F287BAD228886C5A00299CC0 /* ja */,
 			);
 			name = MainMenu.strings;
 			sourceTree = "<group>";
