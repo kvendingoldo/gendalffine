@@ -193,7 +193,7 @@
                                            NULL,
                                            NULL,
                                            NULL,
-                                           0,
+                                           8, //Timeout assertion after 8 sec
                                            NULL,
                                            &sleepAssertionID);
     }
