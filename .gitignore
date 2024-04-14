@@ -64,3 +64,11 @@ iOSInjectionProject/
 
 .DS_Store
 *.swp
+/sparkle/framework/bin
+/sparkle/framework/CHANGELOG
+/sparkle/framework/INSTALL
+/sparkle/framework/LICENSE
+/sparkle/framework/SampleAppcast.xml
+/sparkle/framework/Sparkle Test App.app
+/sparkle/framework/sparkle.app
+/sparkle/framework/Sparkle.framework
