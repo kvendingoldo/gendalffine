@@ -9,10 +9,11 @@
 #import <Cocoa/Cocoa.h>
 
 #import <IOKit/pwr_mgt/IOPMLib.h>
+#import <Sparkle/Sparkle.h>
 
 @class CAPreferencesWindowController;
 
-@interface CAAppDelegate : NSObject <NSApplicationDelegate>
+@interface CAAppDelegate : NSObject <NSApplicationDelegate, SPUStandardUserDriverDelegate>
 {
     BOOL isActive;
     BOOL userSessionIsActive;
@@ -29,6 +30,7 @@
     IBOutlet NSMenuItem *infoSeparatorItem;
     
     CAPreferencesWindowController *preferencesWindowController;
+    SPUStandardUpdaterController *updaterController;
 }
 
 @property (nonatomic, assign, readonly) BOOL isActive;

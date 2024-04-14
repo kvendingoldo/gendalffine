@@ -13,6 +13,8 @@
 		F287BAAA287E833F00299CC0 /* CAPreferencesWindowController.strings in Resources */ = {isa = PBXBuildFile; fileRef = F287BAA4287E833F00299CC0 /* CAPreferencesWindowController.strings */; };
 		F287BAAB287E833F00299CC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F287BAA6287E833F00299CC0 /* Localizable.strings */; };
 		F287BAAC287E833F00299CC0 /* MainMenu.strings in Resources */ = {isa = PBXBuildFile; fileRef = F287BAA8287E833F00299CC0 /* MainMenu.strings */; };
+		F29C792B2BCA4F0900EE2757 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F29C79292BCA4DCC00EE2757 /* Sparkle.framework */; };
+		F29C792C2BCA4F0900EE2757 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F29C79292BCA4DCC00EE2757 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F2E26BFC280B072000B6F9B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E26BFB280B072000B6F9B2 /* Assets.xcassets */; };
 		F2E26BFF280B072000B6F9B2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E26BFD280B072000B6F9B2 /* MainMenu.xib */; };
 		F2E26C01280B072000B6F9B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E26C00280B072000B6F9B2 /* main.m */; };
@@ -22,6 +24,20 @@
 		F2E26C42280C089100B6F9B2 /* inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E26C3A280C089100B6F9B2 /* inactive.png */; };
 		F2E26C45280C089100B6F9B2 /* active.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E26C3D280C089100B6F9B2 /* active.png */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F29C792D2BCA4F0900EE2757 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F29C792C2BCA4F0900EE2757 /* Sparkle.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F22DBAB0285DFE1C0058AF1F /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
@@ -64,6 +80,7 @@
 		F287BAD028886C5A00299CC0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/CAPreferencesWindowController.strings; sourceTree = "<group>"; };
 		F287BAD128886C5A00299CC0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F287BAD228886C5A00299CC0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		F29C79292BCA4DCC00EE2757 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = ../sparkle/framework/Sparkle.framework; sourceTree = "<group>"; };
 		F2E26BF5280B072000B6F9B2 /* Caffeine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Caffeine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E26BFB280B072000B6F9B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2E26BFE280B072000B6F9B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -84,6 +101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F22DBAB1285DFE1C0058AF1F /* IOKit.framework in Frameworks */,
+				F29C792B2BCA4F0900EE2757 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,9 +126,18 @@
 			name = WindowController;
 			sourceTree = "<group>";
 		};
+		F29C79282BCA4DBD00EE2757 /* Sparkle */ = {
+			isa = PBXGroup;
+			children = (
+				F29C79292BCA4DCC00EE2757 /* Sparkle.framework */,
+			);
+			name = Sparkle;
+			sourceTree = "<group>";
+		};
 		F2E26BEC280B072000B6F9B2 = {
 			isa = PBXGroup;
 			children = (
+				F29C79282BCA4DBD00EE2757 /* Sparkle */,
 				F2E26BF7280B072000B6F9B2 /* Caffeine */,
 				F2E26BF6280B072000B6F9B2 /* Products */,
 				F22DBAAF285DFE1C0058AF1F /* Frameworks */,
@@ -189,6 +216,7 @@
 				F2E26BF1280B072000B6F9B2 /* Sources */,
 				F2E26BF2280B072000B6F9B2 /* Frameworks */,
 				F2E26BF3280B072000B6F9B2 /* Resources */,
+				F29C792D2BCA4F0900EE2757 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -206,7 +234,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					F2E26BF4280B072000B6F9B2 = {
 						CreatedOnToolsVersion = 13.3;
@@ -470,9 +498,10 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = 568T6RKXH7;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = ../sparkle/framework;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Caffeine/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -484,7 +513,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.4.2;
+				MARKETING_VERSION = 1.4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = net.domzilla.caffeine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -501,9 +530,10 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = 568T6RKXH7;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = ../sparkle/framework;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Caffeine/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -515,7 +545,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.4.2;
+				MARKETING_VERSION = 1.4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = net.domzilla.caffeine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

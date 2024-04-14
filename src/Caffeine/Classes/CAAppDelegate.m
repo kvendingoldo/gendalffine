@@ -36,6 +36,9 @@
                                                                                         forKey:@"CASuppressLaunchMessage"]];
     
     preferencesWindowController = [[CAPreferencesWindowController alloc] init];
+    updaterController = [[SPUStandardUpdaterController alloc] initWithStartingUpdater:YES
+                                                                      updaterDelegate:nil
+                                                                   userDriverDelegate:self];
     
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"CASuppressLaunchMessage"])
         [self showPreferences:nil];
@@ -105,6 +108,10 @@
     [preferencesWindowController showWindow:self];
 }
 
+- (IBAction)checkForUpdates:(id)sender
+{
+    [updaterController checkForUpdates:sender];
+}
 
 
 #pragma mark Accessors
@@ -246,6 +253,15 @@
 {
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"CADeactivateOnManualSleep"])
         [self deactivate];
+}
+
+
+
+#pragma mark SPUStandardUserDriverDelegate
+#pragma mark ---
+- (BOOL)supportsGentleScheduledUpdateReminders
+{
+    return YES;
 }
 
 @end
