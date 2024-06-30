@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="CAPreferencesWindowController">
+        <customObject id="-2" userLabel="File's Owner" customClass="PreferencesWindowController" customModule="Caffeine" customModuleProvider="target">
             <connections>
                 <outlet property="activateAtLaunchButton" destination="3RL-Ce-4Gn" id="00q-3B-IoB"/>
                 <outlet property="closeButton" destination="HJi-gs-V6e" id="Hnz-dj-V9k"/>
@@ -28,8 +28,7 @@
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="441" y="384" width="624" height="294"/>
             <rect key="screenRect" x="0.0" y="0.0" width="3360" height="1865"/>
-            <value key="minSize" type="size" width="213" height="107"/>
-            <view key="contentView" id="5EL-vG-hXz">
+            <view key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="5EL-vG-hXz">
                 <rect key="frame" x="0.0" y="0.0" width="624" height="294"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>

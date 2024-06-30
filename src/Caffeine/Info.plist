@@ -8,7 +8,5 @@
 	<string>https://dr-caffeine-mac.s3.amazonaws.com/appcast.xml</string>
 	<key>SUPublicEDKey</key>
 	<string>tfFOu6jc/ABVAmXA0xfDMUXxCgKOFQaZ+i2JH4vyKhI=</string>
-	<key>LSUIElement</key>
-	<true/>
 </dict>
 </plist>
