@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22690"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -33,7 +33,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="624" height="294"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="378" translatesAutoresizingMaskIntoConstraints="NO" id="RV0-Xj-HDk">
+                    <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="378" translatesAutoresizingMaskIntoConstraints="NO" id="RV0-Xj-HDk">
                         <rect key="frame" x="133" y="218" width="467" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="justified" id="okL-UW-aSb">
@@ -43,7 +43,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HJi-gs-V6e">
+                    <button imageHugsTitle="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HJi-gs-V6e">
                         <rect key="frame" x="543" y="13" width="69" height="32"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="zdD-ka-2e9">
@@ -62,7 +62,7 @@ DQ
                         <autoresizingMask key="autoresizingMask"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="f73-79-LDr"/>
                     </imageView>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="372" translatesAutoresizingMaskIntoConstraints="NO" id="FpZ-Hk-5nW">
+                    <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="372" translatesAutoresizingMaskIntoConstraints="NO" id="FpZ-Hk-5nW">
                         <rect key="frame" x="134" y="173" width="467" height="37"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="justified" title="Right-click (or ⌘-click) the menu bar icon to show the Caffeine menu." id="hB9-Sr-Xlz">
@@ -71,7 +71,7 @@ DQ
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GVv-6R-uwK">
+                    <button imageHugsTitle="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GVv-6R-uwK">
                         <rect key="frame" x="13" y="13" width="60" height="32"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8XO-ec-vKo">
@@ -82,7 +82,7 @@ DQ
                             <action selector="quitButtonAction:" target="-2" id="Cct-XU-teM"/>
                         </connections>
                     </button>
-                    <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="40I-47-yxv">
+                    <button imageHugsTitle="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="40I-47-yxv">
                         <rect key="frame" x="134" y="59" width="465" height="18"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="check" title="Show this message when starting Caffeine" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="1QK-7q-0g7">
@@ -93,7 +93,7 @@ DQ
                             <action selector="showAtLaunchButtonAction:" target="-2" id="hS7-U3-RwO"/>
                         </connections>
                     </button>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SOc-yV-C6m">
+                    <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SOc-yV-C6m">
                         <rect key="frame" x="134" y="128" width="112" height="17"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Default duration:" id="IN5-46-D02">
@@ -102,7 +102,7 @@ DQ
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3RL-Ce-4Gn">
+                    <button imageHugsTitle="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3RL-Ce-4Gn">
                         <rect key="frame" x="134" y="103" width="465" height="18"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="check" title="Activate when starting Caffeine" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="ac9-VB-gb2">
@@ -113,7 +113,7 @@ DQ
                             <action selector="activateAtLaunchButtonAction:" target="-2" id="p2H-B2-qo4"/>
                         </connections>
                     </button>
-                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5cj-zy-gga">
+                    <popUpButton imageHugsTitle="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5cj-zy-gga">
                         <rect key="frame" x="249" y="122" width="119" height="26"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <popUpButtonCell key="cell" type="push" title="Indefinitely" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="pjP-3i-AkI" id="sqS-6w-ldP">
@@ -158,7 +158,7 @@ DQ
                             <action selector="durationButtonAction:" target="-2" id="zej-vi-LIO"/>
                         </connections>
                     </popUpButton>
-                    <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="laH-Bo-r5z">
+                    <button imageHugsTitle="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="laH-Bo-r5z">
                         <rect key="frame" x="134" y="81" width="464" height="18"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="check" title="Deactivate when device goes to sleep manually" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="zrA-k4-Kvx">
